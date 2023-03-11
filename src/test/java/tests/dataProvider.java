@@ -23,14 +23,14 @@ public class dataProvider {
 
     @Test(dataProvider = "gonderilecekMail")
     public void qualityTest(String mail,String password){
-        Driver.getDriver().get(ConfigReader.getProperty("url"));
+        Driver.getDriver().get(ConfigReader.getProperty("qdUrl"));
         qualityPage.providerMethod(mail,password);
 
     }
 
     @Test
     public void dersEklemeTesti(){
-        Driver.getDriver().get(ConfigReader.getProperty("url"));
+        Driver.getDriver().get(ConfigReader.getProperty("qdUrl"));
         qualityPage.loginMethod();
     }
 
